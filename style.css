@@ -43,9 +43,6 @@ body {
   margin: 0 auto;
 }
 
-p {
-  margin: 20px;
-}
 /*Navbar starts here*/
 
 /* Add a black background color to the top navigation */
@@ -132,6 +129,15 @@ p {
 
 .hero-left {
   flex: 1; /* This will make the left section take up all the remaining space */
+}
+
+/* header-h2 section starts here */
+#header-h2{
+text-align: left;
+margin-left: 0px;
+}
+#header-h2 a{
+  color: gray;
 }
 
 /* CTA styling */
