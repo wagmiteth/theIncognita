@@ -1,107 +1,81 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Learn about Network States | The Incognita</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <script type="text/javascript" src="script.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      type="favicon"
-      href="icons/theIncognitaLogo.png"
-    />
-  </head>
 
-  <body>
-    <div class="wrapper">
-      <div class="content">
-        <!-- Navbar starts here -->
+<head>
+  <title>Apply to get listed | The Incognita</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script type="text/javascript" src="script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="favicon" href="icons/theIncognitaLogo.png" />
+</head>
 
-        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <!-- Navbar starts here -->
 
-        <div class="topnav" id="myTopnav">
-          <a href="index.html" id="nav-logo" class="active">
-            <img
-              src="icons/theIncognitaLogo.png"
-              alt="The incgonita logo"
-              id="meny-icon"
-            />
-          </a>
-          <a href="#"></a>
-          <a href="#"></a>
-          <a href="dao.html">DAO</a>
-          <a href="token.html">Token</a>
-          <a href="learn.html">Learn</a>
-          <a href="roadmap.html">Roadmap</a>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-          </a>
-        </div>
-        <!-- Content starts here -->
-        <div class="container-content">
-          <div class="hero-category">
-            <h1>Fill in the form</h1>
-            <p>
-              <br />
-              <br />
-            </p>
-          </div>
-          <!-- CTA starts here -->
-          <form action="https://submit-form.com/OkZ4UNir">
-            <label for="name">Network State Name*</label>
-            <input
-              type="hidden"
-              name="_redirect"
-              value="https://theincognita.com/thanks"
-            />
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Name"
-              required="true"
-            />
-            <label for="email">Mission*</label>
-            <input type="url" id="website" name="website" placeholder="URL" />
-            <label for="twitter">Twitter</label>
-            <input type="url" id="twitter" name="twitter" placeholder="URL" />
-            <label for="discord">Discord*</label>
-            <input
-              type="url"
-              id="discord"
-              name="discord"
-              placeholder="URL"
-              required="true"
-            />
-            <label for="applicationLink">Application Link*</label>
-            <input
-              id="applicationLink"
-              name="applicationLink"
-              placeholder="URL"
-              required="true"
-            />
-            <button type="submit">Send</button>
-          </form>
+      <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+      <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+      <div class="topnav" id="myTopnav">
+        <a href="index.html" id="nav-logo" class="active">
+          <img src="icons/theIncognitaLogo.png" alt="The incgonita logo" id="meny-icon" />
+        </a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="dao.html">DAO</a>
+        <a href="token.html">Token</a>
+        <a href="learn.html">Learn</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <!-- Content starts here -->
+      <div class="container-content">
+
+        <h1>Apply to get listed</h1>
+        <p>
+          <br />
+          <br />
+        </p>
+
+        <!-- Form starts here -->
+        <form action="https://submit-form.com/OkZ4UNir">
+          <label for="name">Network State Name</label>
+          <input type="hidden" name="_redirect" value="https://theincognita.com/thanks" />
+          <input type="text" id="name" name="name" placeholder="Name" required="true" />
+          <label for="website">Website</label>
+          <input type="url" id="website" name="website" placeholder="URL" required="true" />
+          <label for="mission">Mission</label>
+          <input type="url" id="mission" name="mission" placeholder="Max 70 digits" required="true" />
+          <label for="twitter">Twitter</label>
+          <input type="url" id="twitter" name="twitter" placeholder="URL" />
+          <label for="discord">Discord</label>
+          <input type="url" id="discord" name="discord" placeholder="URL" />
+          <label for="applicationLink">Application Link</label>
+          <input id="applicationLink" name="applicationLink" placeholder="URL" required="true" />
+          <label for="email">Email (Internal use only)</label>
+          <input type="email" id="email" name="email" placeholder="EMAIL" />
+
+          <button type="submit">Apply Now</button>
+        </form>
+      </div>
+    </div>
+    <!-- Footer starts here -->
+    <footer>
+      <div class="footer">
+        <div class="container">
+          <p>theingcognita.com</p>
+          <p>
+            Made with ❤️ by
+            <a href="https://twitter.com/wagmiteth" target="_blank">wagmit.eth</a>
+          </p>
         </div>
       </div>
-      <!-- Footer starts here -->
-      <footer>
-        <div class="footer">
-          <div class="container">
-            <p>theingcognita.com</p>
-            <p>
-              Made with ❤️ by
-              <a href="https://twitter.com/wagmiteth" target="_blank"
-                >wagmit.eth</a
-              >
-            </p>
-          </div>
-        </div>
-      </footer>
-    </div>
-  </body>
+    </footer>
+  </div>
+</body>
+
 </html>

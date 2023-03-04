@@ -373,7 +373,7 @@ textarea {
 
 button[type="submit"] {
   margin-top: 1rem;
-  padding: 0.5rem;
+  padding: 9px 16px;
   background-color: var(--primary-color);
   color: white;
   border: none;
