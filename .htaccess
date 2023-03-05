@@ -14,7 +14,3 @@ RewriteCond %{REQUEST_FILENAME}\.html -f
 
 RewriteRule ^(.\*)$ $1.html [NC,L]
 
-# redirect theincognita.com/index to theincognita.com
-
-RewriteCond %{THE_REQUEST} /index(\.html)? HTTP/
-RewriteRule ^(.*)index(\.html)?$ /$1 [R=301,L]
