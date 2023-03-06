@@ -26,6 +26,7 @@ body {
   display: grid;
   grid-template-rows: 1fr auto;
   min-height: 100%;
+  margin-left: 2px;
 }
 
 .content {
@@ -112,6 +113,7 @@ body {
 /* Hero section starts here */
 .hero {
   display: flex;
+  margin-left: 2px;
 }
 
 .hero-category {
@@ -124,7 +126,6 @@ body {
 }
 .hero h2 {
   text-align: left;
-  margin-left: 20px;
 }
 
 .hero-left {
@@ -134,7 +135,7 @@ body {
 /* header-h2 section starts here */
 #header-h2 {
   text-align: left;
-  margin-left: 0px;
+  margin-left: 2px;
 }
 #header-h2 a {
   color: gray;
@@ -150,7 +151,6 @@ body {
   padding: 9px 16px;
   cursor: pointer;
   float: left;
-  margin-left: 20px;
   text-decoration: none;
 }
 .cta-hero.left {
@@ -161,7 +161,6 @@ body {
   padding: 9px 16px;
   cursor: pointer;
   float: left;
-  margin-left: 20px;
 }
 
 .cta-hero.right {
@@ -208,11 +207,8 @@ body {
 h1 {
   color: black;
   font-size: 32px;
-  margin-left: 20px;
 }
-h2 {
-  margin-left: 20px;
-}
+
 h4 {
   font-weight: bold;
   margin: 0px 0px;
