@@ -2,13 +2,16 @@
 * Global variables
 **/
 :root {
+  --text-color: #10162f; 
   --primary-color: #3a10e5;
+  --hover-color: gray; 
 }
 
 body {
   background-color: #fff2e4;
   font-family: Arial, sans-serif;
   text-align: left;
+  color: var(--text-color);
 }
 @media (max-width: 600px) {
   .content-container {
@@ -26,7 +29,7 @@ body {
   display: grid;
   grid-template-rows: 1fr auto;
   min-height: 100%;
-  margin-left: 2px;
+  margin-left: 20px;
 }
 
 .content {
@@ -44,6 +47,8 @@ body {
   margin: 0 auto;
 }
 
+
+
 /*Navbar starts here*/
 
 /* Add a black background color to the top navigation */
@@ -56,8 +61,7 @@ body {
 .topnav a {
   float: right;
   display: block;
-  /* color: pink; */
-  text-align: center;
+  color: var(--text-color);
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
@@ -137,9 +141,6 @@ body {
   text-align: left;
   margin-left: 2px;
 }
-#header-h2 a {
-  color: gray;
-}
 
 /* CTA styling */
 
@@ -205,7 +206,6 @@ body {
 /* Hero section ends here */
 
 h1 {
-  color: black;
   font-size: 32px;
 }
 
@@ -214,13 +214,17 @@ h4 {
   margin: 0px 0px;
 }
 
+h4:hover{
+  color: var(--hover-color);
+}
+
 a {
-  color: black;
+  color: var(--primary-color);
   text-decoration: none;
 }
 
 a:hover {
-  color: gray;
+  color: var(--hover-color);
 }
 
 /*Tabble starts here*/
@@ -317,7 +321,7 @@ td:nth-child(5) {
   cursor: pointer;
 }
 .cta:hover {
-  background-color: gray;
+  background-color: var(--hover-color);
 }
 
 /*text-table starts here*/
@@ -372,7 +376,6 @@ textarea {
   border-radius: 4px;
   font-size: 1rem;
 }
-
 
 button[type="submit"] {
   margin-top: 1rem;
