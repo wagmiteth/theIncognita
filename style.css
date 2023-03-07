@@ -37,12 +37,6 @@ body {
 }
 
 .container {
-  text-align: center;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.container-content {
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -136,11 +130,7 @@ body {
   flex: 1; /* This will make the left section take up all the remaining space */
 }
 
-/* header-h2 section starts here */
-#header-h2 {
-  text-align: left;
-  margin-left: 2px;
-}
+
 
 /* CTA styling */
 
@@ -212,6 +202,7 @@ h1 {
 h4 {
   font-weight: bold;
   margin: 0px 0px;
+  color: var(--text-color);
 }
 
 h4:hover{
@@ -347,6 +338,7 @@ footer {
   padding: 1em;
   margin-top: 50px;
   border-top: 1px solid #10162f;
+  text-align: center;
 }
 
 /**
@@ -358,8 +350,9 @@ form {
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  max-width: 500px;
-  padding: 20px;
+  max-width: 550px;
+  padding-right: 20px;
+  font-weight: bold;
 }
 
 label {
