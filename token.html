@@ -14,23 +14,50 @@
 <body> 
     <div class="wrapper">
   <div class="content">
-    <!-- Navbar starts here -->
-  
-<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<div class="topnav" id="myTopnav">
-  <a href="/" id="nav-logo" class="active"> <img src="icons/theIncognitaLogo.png" alt="The incgonita logo" id="meny-icon"> </a>
-  <a href="#"></a>
-  <a href="#"></a>
-  <a href="dao">DAO</a>
-  <a href="token">Token</a>
-  <a href="learn-how-to-establish-a-network-state">Learn</a>
-  <a href="roadmap">Roadmap</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
+ <!-- header start -->
+ <header class="header">
+  <div class="container-header">
+    <div class="header-main">
+      <div class="logo">
+        <a href="/">
+          <img src="icons/theIncognitaLogo.png" alt="Incognita logo"
+        /></a>
+      </div>
+      <div class="open-nav-menu">
+        <span></span>
+      </div>
+      <div class="menu-overlay"></div>
+      <!-- navigation menu start -->
+      <nav class="nav-menu">
+        <div class="close-nav-menu">
+          <img src="icons/closex.svg" alt="close" />
+        </div>
+        <ul class="menu">
+          <li class="menu-item"><a href="roadmap">Roadmap</a></li>
+          <li class="menu-item"><a href="dao">DAO</a></li>
+          <li class="menu-item menu-item-has-children">
+            <a
+              href="learn-how-to-establish-a-network-state"
+              data-toggle="sub-menu"
+              >Learn <i class="plus"></i
+            ></a>
+            <ul class="sub-menu">
+              <li class="menu-item">
+                <a href="learn-how-to-establish-a-network-state"
+                  >How to establish a network state</a
+                >
+              </li>
+              <li class="menu-item"><a href="#">page 2</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- navigation menu end -->
+    </div>
+  </div>
+</header>
+<!-- header end -->
    <!-- Content starts here -->
 <div class="container-content">
   <div class="hero-category">
@@ -53,6 +80,7 @@
   </div>
 </footer>
 </div>
+<script src="script.js"></script>
 </body>
 
 </html>

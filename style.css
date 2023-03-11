@@ -2,13 +2,17 @@
 * Global variables
 **/
 :root {
-  --text-color: #10162f; 
+  --text-color: #10162f;
   --primary-color: #3a10e5;
-  --hover-color: gray; 
+  --hover-color: gray;
+  --background-color: #fff2e4;
+}
+* {
+
 }
 
 body {
-  background-color: #fff2e4;
+  background-color: var(--background-color);
   font-family: Arial, sans-serif;
   text-align: left;
   color: var(--text-color);
@@ -41,71 +45,259 @@ body {
   margin: 0 auto;
 }
 
-
-
 /*Navbar starts here*/
-
-/* Add a black background color to the top navigation */
-.topnav {
-  background-color: #fff2e4;
-  overflow: hidden;
+body.hidden-scrolling {
+  overflow-y: hidden;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: right;
-  display: block;
-  color: var(--text-color);
-  padding: 14px 16px;
+.container-header {
+  margin: auto;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
   text-decoration: none;
-  font-size: 17px;
 }
 
-#nav-logo {
-  float: left;
+/*header*/
+.header {
+  position: relative;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 99;
 }
-#meny-icon {
-  height: 20px;
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-radius: 4px;
+  margin-bottom: 40px;
+}
+.header .logo {
+  padding: 0 15px;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #fff2e4;
+.header .nav-menu {
+  padding: 0 15px;
 }
-
-/* Add an active class to highlight the current page */
-.topnav a.active {
-  background-color: #fff2e4;
-  color: #ffffff;
+.header .menu > .menu-item {
+  display: inline-block;
+  margin-left: 30px;
+  position: relative;
 }
-
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
+.header .menu > .menu-item > a {
+  display: block;
+  padding: 12px 0;
+  font-size: 16px;
+  color: var(--text-color);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.header .menu > .menu-item > a .plus {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  position: relative;
+  margin-left: 5px;
+  pointer-events: none;
+}
+.header .menu > .menu-item > a .plus:before,
+.header .menu > .menu-item > a .plus:after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  left: 50%;
+  top: 50%;
+  background-color: var(--text-color);
+  height: 2px;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+.header .menu > .menu-item:hover > a .plus:before,
+.header .menu > .menu-item:hover > a .plus:after {
+  background-color: var(--primary-color);
+}
+.header .menu > .menu-item > a .plus:after {
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+.header .menu > .menu-item > .sub-menu > .menu-item > a:hover,
+.header .menu > .menu-item:hover > a {
+  color: var(--hover-color);
+}
+.header .menu > .menu-item > .sub-menu {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 220px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #ffffff;
+  padding: 10px 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+@media (min-width: 992px) {
+  .header .menu > .menu-item-has-children:hover > .sub-menu {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  .header .menu > .menu-item-has-children:hover > a .plus:after {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+.header .menu > .menu-item > .sub-menu > .menu-item {
+  display: block;
+}
+.header .menu > .menu-item > .sub-menu > .menu-item > a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+.header .open-nav-menu {
+  height: 34px;
+  width: 40px;
+  margin-right: 15px;
   display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {
-    display: none;
+.header .open-nav-menu span {
+  display: block;
+  height: 3px;
+  width: 24px;
+  background-color: var(--text-color);
+  position: relative;
+}
+.header .open-nav-menu span:before,
+.header .open-nav-menu span:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--text-color);
+  box-sizing: border-box;
+}
+.header .open-nav-menu span:before {
+  top: -7px;
+}
+.header .open-nav-menu span:after {
+  top: 7px;
+}
+.header .close-nav-menu {
+  height: 40px;
+  width: 40px;
+  margin: 0 0 15px 15px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.header .close-nav-menu img {
+  width: 32px;
+}
+.header .menu-overlay {
+  position: fixed;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+
+/* responsive */
+
+@media (max-width: 991px) {
+  .header .menu-overlay.active {
+    visibility: visible;
+    opacity: 1;
   }
-  .topnav a.icon {
-    float: right;
+  .header .nav-menu {
+    position: fixed;
+    right: -280px;
+    visibility: hidden;
+    width: 280px;
+    height: 100%;
+    top: 0;
+    overflow-y: auto;
+    background-color: #222222;
+    z-index: 1000;
+    padding: 15px 0;
+    transition: all 0.5s ease;
+  }
+  .header .nav-menu.open {
+    visibility: visible;
+    right: 0px;
+  }
+  .header .menu > .menu-item {
     display: block;
+    margin: 0;
+  }
+  .header .menu > .menu-item-has-children > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header .menu > .menu-item > a {
+    color: #ffffff;
+    padding: 12px 15px;
+    border-bottom: 1px solid #333333;
+  }
+  .header .menu > .menu-item:first-child > a {
+    border-top: 1px solid #333333;
+  }
+  .header .menu > .menu-item > a .plus:before,
+  .header .menu > .menu-item > a .plus:after {
+    background-color: #ffffff;
+  }
+  .header .menu > .menu-item-has-children.active > a .plus:after {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  .header .menu > .menu-item > .sub-menu {
+    width: 100%;
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    transform: translateY(0px);
+    padding: 0px;
+    left: auto;
+    top: auto;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .header .menu > .menu-item > .sub-menu > .menu-item > a {
+    padding: 12px 45px;
+    color: #ffffff;
+    border-bottom: 1px solid #333333;
+  }
+  .header .close-nav-menu,
+  .header .open-nav-menu {
+    display: flex;
   }
 }
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
-  .topnav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: right;
-  }
+.header-h2 {
+	margin-top: 20px;
 }
 
 /* Hero section starts here */
@@ -120,17 +312,15 @@ body {
 
 .hero h1 {
   text-align: left;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
 }
 .hero h2 {
-  text-align: left;
+margin-bottom: 20px;
 }
 
 .hero-left {
   flex: 1; /* This will make the left section take up all the remaining space */
 }
-
-
 
 /* CTA styling */
 
@@ -143,6 +333,7 @@ body {
   cursor: pointer;
   float: left;
   text-decoration: none;
+  margin-top: 20px;
 }
 .cta-hero.left {
   border: solid 1px var(--primary-color);
@@ -205,7 +396,7 @@ h4 {
   color: var(--text-color);
 }
 
-h4:hover{
+h4:hover {
   color: var(--hover-color);
 }
 
@@ -282,7 +473,7 @@ tr:nth-child(even) {
 /*Picture and icons*/
 img {
   vertical-align: top;
-  height: 48px;
+  height: 40px;
   margin: 2px 2px;
 }
 
