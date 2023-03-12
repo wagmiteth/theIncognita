@@ -33,7 +33,6 @@ body {
   display: grid;
   grid-template-rows: 1fr auto;
   min-height: 100%;
-  margin-left: 20px;
 }
 
 .content {
@@ -574,4 +573,25 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: #5031f3;
+}
+
+/* Blog catergory starts here */
+.blog-category{
+  max-width: 600px;
+  margin: 0 auto;
+}
+#blog-header{
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .blog-category {
+    max-width: 96%; /* Adjust the maximum width */
+  }
+  #blog-header {
+    max-width: 96%; 
+  }
 }
