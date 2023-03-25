@@ -18,12 +18,13 @@ body {
   color: var(--text-color);
 }
 .container-content{
-  margin-left: 20px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 @media (max-width: 600px) {
   .content-container {
-    max-width: 90%;
+    max-width: 96%;
   }
 }
 
