@@ -1,6 +1,8 @@
 
 
-(() =>{
+// Navbar starts here
+
+(() => {
  
   const openNavMenu = document.querySelector(".open-nav-menu"),
   closeNavMenu = document.querySelector(".close-nav-menu"),
@@ -65,4 +67,25 @@
   });
 
 })();
+
+// Popup starts here
+document.addEventListener("DOMContentLoaded", function() {
+  const openPopupButton = document.getElementById("openPopup");
+  const closePopupButton = document.getElementById("closePopup");
+  const popup = document.getElementById("popup");
+
+  openPopupButton.addEventListener("click", function() {
+      popup.classList.remove("popup-hidden");
+  });
+
+  closePopupButton.addEventListener("click", function() {
+      popup.classList.add("popup-hidden");
+  });
+
+  window.addEventListener("click", function(event) {
+      if (event.target === popup) {
+          popup.classList.add("popup-hidden");
+      }
+  });
+});
 
