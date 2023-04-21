@@ -69,23 +69,29 @@
 })();
 
 // Popup starts here
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const openPopupButton = document.getElementById("openPopup");
   const closePopupButton = document.getElementById("closePopup");
   const popup = document.getElementById("popup");
+  const popupContent = document.querySelector(".popup-content");
 
-  openPopupButton.addEventListener("click", function() {
+  openPopupButton.addEventListener("click", function () {
       popup.classList.remove("popup-hidden");
+      document.body.style.overflow = "hidden"; // Prevent scrolling on the main body
+      popupContent.focus(); // Move focus to the popup content
   });
 
-  closePopupButton.addEventListener("click", function() {
+  closePopupButton.addEventListener("click", function () {
       popup.classList.add("popup-hidden");
+      document.body.style.overflow = ""; // Re-enable scrolling on the main body
   });
 
-  window.addEventListener("click", function(event) {
+  window.addEventListener("click", function (event) {
       if (event.target === popup) {
           popup.classList.add("popup-hidden");
+          document.body.style.overflow = ""; // Re-enable scrolling on the main body
       }
   });
 });
+
 

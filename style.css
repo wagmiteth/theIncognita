@@ -16,6 +16,7 @@ body {
   font-family: Arial, sans-serif;
   text-align: left;
   color: var(--text-color);
+  overflow-x: hidden;
 }
 .container-content{
   max-width: 600px;
@@ -68,6 +69,7 @@ a {
 }
 
 /*header*/
+
 .header {
   position: relative;
   width: 100%;
@@ -331,6 +333,10 @@ margin-bottom: 20px;
 
 .popup-hidden {
     display: none;
+}@media screen and (max-width: 768px) {
+  #popup {
+      padding-top: 60px; /* Add padding equal to the navbar height */
+  }
 }
 
 #popup {
@@ -341,18 +347,21 @@ margin-bottom: 20px;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    
 }
 
 .popup-content {
     position: relative;
     background-color: var(--background-color);
-    margin: 15% auto;
+    margin: 2% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
     max-width: 400px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+    max-height: 80vh; /* Adjust this value to control the maximum height of the popup */
+    overflow-y: auto; /* Enable scrolling when the content overflows the max-height */
+  }
 
 .close {
     color: #aaa;
@@ -367,6 +376,11 @@ margin-bottom: 20px;
     text-decoration: none;
 }
 
+@media screen and (max-width: 600px) {
+  #popup {
+      padding-top: 60px; /* Add padding equal to the navbar height */
+  }
+}
 
 /* CTA styling */
 
