@@ -94,4 +94,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
+const toggleBtns = document.querySelectorAll('.toggle-btn');
+toggleBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const toggleContent = btn.nextElementSibling;
+    if (toggleContent.style.display === 'block') {
+      toggleContent.style.display = 'none';
+    } else {
+      toggleContent.style.display = 'block';
+    }
+    btn.focus();
+  });
+});

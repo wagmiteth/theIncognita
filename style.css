@@ -656,3 +656,12 @@ button[type="submit"]:hover {
     max-width: 96%; 
   }
 }
+
+/* Toggle  */
+.toggle-content {
+  display: none;
+}
+
+.toggle-btn:focus + .toggle-content {
+  display: block;
+}
